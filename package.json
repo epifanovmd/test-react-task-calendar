@@ -1,0 +1,110 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "React Template App SSR",
+  "homepage": "https://epifanovmd.github.io/react-template-app",
+  "author": {
+    "name": "Epifanov Andrei",
+    "email": "epifanovmd@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epifanovmd/react-template-app.git"
+  },
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "start": "node build/server/server.js",
+    "dev": "webpack-dev-server",
+    "lint": "tslint \"src/**/*{.ts,.tsx}\"",
+    "lint:fix": "tslint --fix \"src/**/*{.ts,.tsx}\"",
+    "prettier:fix": "prettier --parser typescript --write src/**/*.{json,ts,tsx}"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.11.0",
+    "@loadable/webpack-plugin": "^5.7.1",
+    "classnames": "^2.2.6",
+    "luxon": "^1.21.3",
+    "query-string": "^6.10.1",
+    "react": "^16.12.0",
+    "react-cookie": "^4.0.1",
+    "react-cookies": "^0.1.1",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "typescript-fsa": "^3.0.0",
+    "typescript-fsa-reducers": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@loadable/babel-plugin": "^5.11.0",
+    "@types/autoprefixer": "^9.6.1",
+    "@types/classnames": "^2.2.9",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/copy-webpack-plugin": "^5.0.0",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "@types/loadable__component": "^5.10.0",
+    "@types/loadable__server": "^5.9.1",
+    "@types/luxon": "^1.21.0",
+    "@types/mini-css-extract-plugin": "^0.9.0",
+    "@types/node": "^13.1.0",
+    "@types/react": "^16.9.17",
+    "@types/react-cookies": "^0.1.0",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router": "^5.1.3",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/redux": "^3.6.0",
+    "@types/webpack-dev-server": "^3.9.0",
+    "@types/webpack-manifest-plugin": "^2.1.0",
+    "@types/webpack-node-externals": "^1.7.0",
+    "autoprefixer": "^9.7.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "http-proxy-middleware": "^0.20.0",
+    "husky": "1.0.1",
+    "lint-staged": "^10.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node": "^13.5.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "terser-webpack-plugin": "^2.3.1",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.2.0",
+    "tslint-react-hooks": "^2.2.1",
+    "typescript": "^3.7.4",
+    "typescript-plugin-css-modules": "^2.1.2",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-manifest-plugin": "^2.2.0"
+  },
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix \"src/**/*{.ts,.tsx}\"",
+      "prettier --parser typescript --write src/**/*.{json,ts,tsx}",
+      "git add"
+    ]
+  }
+}
