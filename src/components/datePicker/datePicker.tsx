@@ -32,8 +32,7 @@ export const DatePicker: FC<IProps> = memo(({
   );
 
   return (
-    <div className={styles.container}>
-      <div className={styles.date}>{date.toFormat("LLL yyyy")}</div>
+    <div className={styles.container}><div className={styles.date}>{date.toFormat("LLL yyyy")}</div>
       <div className={styles.week_container}>
         {weeks.map((item) => (
           <span key={item + Math.random()} className={styles.week}>
