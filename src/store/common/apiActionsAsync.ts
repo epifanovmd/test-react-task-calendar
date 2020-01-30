@@ -36,14 +36,13 @@ export const callApi = <P, R>({
     if (status >= 400 || data == null) {
       const error = {
         name: status.toString(),
-        message:
-          ({ ...data } as Error).message || message || status.toString(),
+        message: ({ ...data } as Error).message || message || status.toString(),
       };
 
       dispatch(actions.failed({ params, error }));
       onFail && onFail();
     } else {
-      dispatch(actions.done({ params, result: {data, status, message} }));
+      dispatch(actions.done({ params, result: { data, status, message } }));
       onSuccess && onSuccess(getState, data);
     }
   };

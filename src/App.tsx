@@ -3,16 +3,11 @@ import React, { FC } from "react";
 import { routes } from "./routes";
 
 const App: FC = () => {
-
   return (
     <div className="container">
       <Switch>
         {routes.map((route) => (
-          <Route
-            {...route}
-            key={route.path}
-            component={route.component}
-          />
+          <Route {...route} key={route.path} component={route.component} />
         ))}
       </Switch>
     </div>

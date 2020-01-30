@@ -1,5 +1,9 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
-import { datesInitialState, EntriesDates, IQuarterState } from "./IQuarterState";
+import {
+  datesInitialState,
+  EntriesDates,
+  IQuarterState,
+} from "./IQuarterState";
 import { QuarterActions } from "./QuarterActions";
 import { newState } from "../../store/common/newState";
 import { LoadState } from "../../common/loadState";
@@ -27,7 +31,11 @@ function getDatesDoneHandler(
       dates: {
         data:
           result.data?.map(
-            (item: IDate) => [item.date, { date: item.date, value: true, id: item.id }] as EntriesDates,
+            (item: IDate) =>
+              [
+                item.date,
+                { date: item.date, value: true, id: item.id },
+              ] as EntriesDates,
           ) || state.dates.data,
         loadState: LoadState.idle,
       },

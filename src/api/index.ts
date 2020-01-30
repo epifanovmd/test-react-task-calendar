@@ -34,7 +34,7 @@ export const baseFetch = async <P, R>(
       },
     });
 
-    const json = await res?.json() || {};
+    const json = (await res?.json()) || {};
     const status = res.status;
 
     return { data: json as R, status };

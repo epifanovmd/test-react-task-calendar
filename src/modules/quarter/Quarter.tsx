@@ -72,14 +72,14 @@ const Quarter: FC<IProps> = memo(() => {
   return (
     <>
       <div className="loader" />
-        <Calendar
-          isRefreshing={loadState === LoadState.refreshing}
-          onChangeShowMonths={onChangeShowMonths}
-          onSave={onSave}
-          onReset={onGetDates}
-          months={3}
-          dates={mapDates}
-        />
+      <Calendar
+        isRefreshing={loadState === LoadState.refreshing}
+        onChangeShowMonths={onChangeShowMonths}
+        onSave={onSave}
+        onReset={onGetDates}
+        months={3}
+        dates={mapDates}
+      />
     </>
   );
 });

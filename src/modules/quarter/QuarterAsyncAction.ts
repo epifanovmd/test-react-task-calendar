@@ -4,7 +4,7 @@ import { RequestType } from "../../common/requestType";
 import { ISaveDate } from "../../api/dto/dates";
 
 export const QuarterAsyncAction = {
-  getDates: (params: {months?: string}) => {
+  getDates: (params: { months?: string }) => {
     return callApi({
       url: "dates",
       method: RequestType.GET,

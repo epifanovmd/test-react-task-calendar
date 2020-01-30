@@ -3,7 +3,7 @@ import { IDate, ISaveDate } from "../../api/dto/dates";
 import { IResponse } from "../../api";
 
 export const QuarterActions = {
-  getDates: actionCreator.async<{months?: string}, IResponse<IDate[]>, Error>(
+  getDates: actionCreator.async<{ months?: string }, IResponse<IDate[]>, Error>(
     "Dates/GET_DATES",
   ),
   saveDate: actionCreator.async<ISaveDate[], IResponse<IDate[]>, Error>(
